@@ -5,7 +5,7 @@ if (process.env.NODE_ENV !== 'production') {
 const express = require('express');
 const app = express();
 
-const indexRouter = require('./routes/index');
+const indexRouter = require('./routes');
 app.use('/', indexRouter);
 const abilitiesRouter = require('./routes/abilities');
 app.use('/abilities', abilitiesRouter);
