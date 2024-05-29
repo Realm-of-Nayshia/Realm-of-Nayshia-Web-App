@@ -1,0 +1,25 @@
+.General{
+    font-family: Tahoma, sans-serif;
+    font-size: medium;
+
+    h1, h2, h3, h4, h5, h6{
+        text-align: center;
+    }
+}
+
+.Navbar{
+    text-align: center;
+}
+
+.NavbarButton{
+    /* Padding + Margin */
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 0 0.25rem;
+
+    /* Color */
+    background-color: #FFD700;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 0.25rem;
+}
