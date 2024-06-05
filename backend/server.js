@@ -3,7 +3,13 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 const express = require('express');
+const cors = require('cors');
 const app = express();
+
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(express.static('public'));
+app.use(cors());
 
 const indexRouter = require('./routes');
 app.use('/', indexRouter);
@@ -22,9 +28,6 @@ app.use('/items', itemsRouter);
 
 app.set('view engine', 'ejs')
 app.set('views', __dirname + '/views')
-app.use(express.json())
-app.use(express.urlencoded({ extended: false }))
-app.use(express.static('public'))
 
 const PORT = process.env.PORT;
 app.listen(PORT, () => {
